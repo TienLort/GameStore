@@ -1,0 +1,42 @@
+@keyframes loading {
+  0% {
+    background-color: hsl(0, 0%, 15%);
+  }
+
+  50% {
+    background-color: hsl(0, 0%, 18%);
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 15%);
+  }
+}
+
+.BackgroundImage {
+  height: 100% !important;
+
+  background: {
+    size: cover;
+    position: center;
+  }
+}
+
+.Wrapper > div:last-child:not(.BackgroundImage) {
+  z-index: 0;
+  animation: loading 1.25s infinite;
+  pointer-events: none;
+
+  &::before {
+    content: none;
+  }
+}
+
+.privacy-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1c1c1c;
+  z-index: 2;
+}

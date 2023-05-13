@@ -1,0 +1,44 @@
+.Box {
+  color: #fff;
+}
+.article_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  .btn {
+    &__icon_like,
+    &__icon_list,
+    &__icon {
+      color: #fff;
+      font-size: 26px;
+      background: transparent;
+      outline: none;
+      &:hover {
+        color: yellow;
+      }
+    }
+    &__icon_like {
+      &:hover {
+        color: red;
+      }
+    }
+    &__icon_list {
+      &:hover {
+        color: green;
+      }
+    }
+    &__count {
+      outline: none;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+  .activeLike {
+    color: red;
+  }
+  .activeList {
+    color: green;
+  }
+}
